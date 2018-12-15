@@ -1,3 +1,5 @@
+// import { url } from "inspector";
+
 /**
  * Created by 54721 on 2018/12/14.
  */
@@ -52,4 +54,35 @@ $(function () {
       }
     }
   });
+  // 注册表单校验成功事件
+  $("#form").on('success.form.bv', function (e) {
+    // 阻止浏览器默认提交
+    e.preventDefault();
+    //使用ajax提交逻辑
+    // console.log("通过ajax提交");
+    $.ajax({
+      type: "post",
+      url: "/employee/employeeLogin",
+      data: $("#form").serialize(),  //表单序列化
+      dataType: "json",
+      success: function (info) {
+        if (info.success) {  //error 1000 用户名错误  1001 密码错误
+          location.href = "index.html";
+        }
+        if (info.error === 1000) {
+          alert("用户名不存在")
+        }
+        if (info.error === 1001) {
+          alert("密码错误")
+        }
+      }
+    })
+  });
+
+  // 表单重置功能
+  // $("#form").data('bootstrapValidator').resetForm(true)
+  $('[type="reset"]').click(function () {
+    $("#form").data('bootstrapValidator').resetForm(true)
+  })
+
 })
