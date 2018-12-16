@@ -1,0 +1,123 @@
+/* a 通用样式 */
+a:hover,
+a:link,
+a:visited,
+a:active{
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+.red {
+    color: #a94442;
+}
+.aside {
+    position: fixed;
+    width: 180px;
+    height: 100%;
+    background-color: #222D32;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    transition: all 1s;
+}
+.aside.hidemenu {
+    left: -180px;
+}
+.aside .brand {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: #367FA9;
+    text-align: center;
+}
+.aside .brand a {
+    color: #fff;
+    font-size: 24px;
+    
+}
+.aside .user {
+    height: 180px;
+    width: 180px;
+    padding-top: 30px;
+    text-align: center;
+}
+.aside .user img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}
+.aside .user p {
+    width: 180px;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 18px;
+}
+.aside .nav ul {
+    padding-left: 0px;
+}
+.aside .nav a{
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    padding-left: 40px;
+    border-left: 3px solid transparent;
+}
+.aside .nav a.choose {
+    background-color: #1D1F21;
+    border-left: 3px solid #006699;
+}
+.aside .nav .child {
+    display: none;
+}
+.aside .nav .child a{
+    padding-left: 60px;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+}
+.main {
+    height: 1000px;
+    padding-left: 180px;
+    padding-top: 50px;
+}
+.main.hidemenu {
+    padding-left: 0px;
+    transition: all 1s;
+}
+.main .topbar {
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    background-color: #3C8DBC;
+    padding-left: 180px;
+    top: 0px;
+    right: 0px;
+}
+.main .topbar.hidemenu {
+    padding-left: 0px;
+    transition: all 1s;
+}
+.main .topbar a {
+    display: block;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+.main .topbar a i {
+    color: #fff;
+    font-size: 20px;
+}    
+.container-fluid .breadcrumb{
+    margin: 20px 0;
+}
+.container-fluid .box-left,
+.container-fluid .box-right {
+    width: 48%;
+    height: 400px;
+    /* background-color: skyblue; */
+}
